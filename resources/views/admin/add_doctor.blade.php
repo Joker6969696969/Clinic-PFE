@@ -24,15 +24,29 @@
         <div class="container-fluid page-body-wrapper">
         
             <div class="container" align="center" style="padding-top: 100px">
+
+            @if(session()->has('message'))
+
+                <div class="alert alert-success">
+                    <button type="button" class="close" data-dismiss="alert">X</button>
+                    {{session()->get('message')}}
+                </div>
+
+            @endif
+
+
                 <form action="{{url('upload_doctor')}}" method="POST" enctype="multipart/form-data">
+
+                    @csrf
+
                     <div style="padding:15px;">
                         <label for="">Doctor Name</label>
-                        <input type="text" style="color:black;" name="name" placeholder="Write the Name">
+                        <input type="text" style="color:black;" name="name" placeholder="Write the Name" required="">
                     </div>
 
                     <div style="padding:15px;">
                         <label for="">Phone Number</label>
-                        <input type="number" style="color:black;" name="number" placeholder="Write the Number">
+                        <input type="number" style="color:black;" name="number" placeholder="Write the Number" required="">
                     </div>
 
                     <div style="padding:15px;">
@@ -48,16 +62,16 @@
 
                     <div style="padding:15px;">
                         <label for="">Doctor Address</label>
-                        <input type="text" style="color:black;" name="address" id="address" autocomplete="street-address" placeholder="Write the Address">
+                        <input type="text" style="color:black;" name="address" id="address" autocomplete="street-address" placeholder="Write the Address"  required="">
                     </div>
 
                     <div style="padding:15px;">
                         <label for="">Doctor Image</label>
-                        <input type="file" name="file">
+                        <input type="file" name="file" required="">
                     </div>
 
                     <div style="padding:15px;">
-                        <input type="submit" name="btn btn-success">
+                        <input type="submit" class="btn btn-success">
                     </div>
                 </form>
             </div>
