@@ -28,7 +28,7 @@
             @if(session()->has('message'))
 
                 <div class="alert alert-success">
-                    <button type="button" class="close" data-dismiss="alert">X</button>
+                    <button type="button" class="close" data-dismiss="alert">x</button>
                     {{session()->get('message')}}
                 </div>
 
@@ -51,7 +51,7 @@
 
                     <div style="padding:15px;">
                         <label for="">Doctor Speciality</label>
-                        <select name="" id="" style="color:black; width: 200px;">
+                        <select name="speciality" id="" style="color:black; width: 200px;">
                             <option value="">--Select--</option>
                             <option value="Fisioterapeuta">Fisioterapeuta</option>
                             <option value="Nutricionista">Nutricionista</option>
@@ -68,7 +68,7 @@
                     <div style="padding:15px;">
                         <label for="">Doctor Image</label>
                         <input type="file" name="file" required="">
-                    </div>
+                    </div>  
 
                     <div style="padding:15px;">
                         <input type="submit" class="btn btn-success">
