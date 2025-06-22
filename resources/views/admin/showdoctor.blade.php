@@ -31,7 +31,7 @@
                     <td style="padding:5px">{{$doctor->address}}</td>
                     <td style="padding:5px"><img height="200" width="200" src="doctorimage/{{$doctor->image}}" alt=""></td>
                     <td style="padding:5px"><a onclick="return confirm('Are you sure you want to delete Doctor?');" class="btn btn-danger" href="{{url('deletedoctor',$doctor->id)}}">Delete</a></td>
-                    <td style="padding:5px"><a class="btn btn-primary" href="">Edit</a></td>
+                    <td style="padding:5px"><a class="btn btn-primary" href="{{url('updatedoctor',$doctor->id)}}">Edit</a></td>
                 </tr>
                 @endforeach
             </table>

@@ -7,7 +7,7 @@ use App\Http\Controllers\AdminController;
 
 Route::get('/',[HomeController::class, 'index']);
 
-Route::get('/home',[HomeController::class, 'redirect']);
+Route::get('/home',[HomeController::class, 'redirect'])->middleware('auth','verified');
 
 Route::get('/add_doctor_view',[AdminController::class, 'addview']);
 
@@ -28,6 +28,10 @@ Route::get('/canceled/{id}',[AdminController::class, 'canceled']);
 Route::get('/showdoctor',[AdminController::class, 'showdoctor']);
 
 Route::get('/deletedoctor/{id}',[AdminController::class, 'deletedoctor']);
+
+Route::get('/updatedoctor/{id}',[AdminController::class, 'updatedoctor']);
+
+Route::post('/editdoctor/{id}',[AdminController::class, 'editdoctor']);
 
 
 
