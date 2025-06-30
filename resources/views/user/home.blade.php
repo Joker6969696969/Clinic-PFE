@@ -31,9 +31,9 @@
         <div class="row">
           <div class="col-sm-8 text-sm">
             <div class="site-info">
-              <a href="#"><span class="mai-call text-primary"></span> +00 123 4455 6666</a>
+              <a href="#"><span class="mai-call text-primary"></span> +212 606 5295 06</a>
               <span class="divider">|</span>
-              <a href="#"><span class="mai-mail text-primary"></span> mail@example.com</a>
+              <a href="#"><span class="mai-mail text-primary"></span> aminesmairi.it@gmail.com </a>
             </div>
           </div>
           <div class="col-sm-4 text-right text-sm">
@@ -71,16 +71,16 @@
               <a class="nav-link" href="{{url('/')}}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
+              <a class="nav-link" href="#about">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="doctors.html">Doctors</a>
+              <a class="nav-link" href="#doctor">Doctors</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="blog.html">News</a>
+              <a class="nav-link" href="#News">News</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link" href="#contact">Contact</a>
             </li>
 
             @if(Route::has('login'))
@@ -166,7 +166,7 @@
       </div>
     </div> <!-- .page-section -->
 
-    <div class="page-section pb-0">
+    <div id="about" class="page-section pb-0">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6 py-3 wow fadeInUp">
@@ -222,7 +222,7 @@
             <li><a href="#">One-Live</a></li>
           </ul>
         </div>
-        <div class="col-sm-6 col-lg-3 py-3">
+        <div id="contact" class="col-sm-6 col-lg-3 py-3">
           <h5>Contact</h5>
           <p class="footer-link mt-2">351 Willow Street Franklin, MA 02038</p>
           <a href="#" class="footer-link">701-573-7582</a>
